@@ -1,0 +1,515 @@
+header {
+  padding: 0.2rem 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: 0.3s;
+  background-color: var(--light);
+}
+
+header img {
+  width: 40px;
+  height: 40px;
+}
+
+header a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--dark);
+  font-size: 0.8rem;
+  letter-spacing: 0.2px;
+  font-weight: 500;
+}
+header span {
+  line-height: 1;
+}
+
+header svg {
+  width: 18px;
+  height: 18px;
+}
+
+header.sticky {
+  box-shadow: 0 -1px 8px 1px var(--dark);
+}
+
+.icons {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.icons select {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: var(--dark);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+}
+.icons select:hover {
+  color: #f05454;
+}
+
+.icons select option {
+  cursor: pointer;
+  color: #121212;
+  font-weight: normal;
+}
+
+/*hero*/
+.container {
+  margin-top: 2rem;
+  display: grid;
+  place-content: center;
+  place-items: center;
+  gap: 4em;
+  text-align: center;
+  background-color: var(--light-500);
+}
+
+.hero {
+  display: grid;
+  gap: 1em;
+}
+
+.identify h1 {
+  line-height: 0.9;
+  letter-spacing: -0.2px;
+  text-wrap: balance;
+}
+.identify p {
+  letter-spacing: 0.1px;
+  padding: 1.2rem 0.6rem;
+  font-size: 0.9rem;
+  color: var(--neutral-800);
+}
+
+.full_name {
+  font-weight: 700;
+  user-select: none;
+}
+
+.img {
+  width: 175px;
+  height: 175px;
+  margin: 0 auto;
+  background-image: url(img/hero.svg);
+  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  border: 3px solid #242424;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  transition: all 1s ease-in-out;
+  animation: alpha 8s ease-in-out infinite;
+}
+@keyframes alpha {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+}
+
+.tech_stack {
+  display: grid;
+  gap: 1.2em;
+}
+.tech_title {
+  display: grid;
+  place-content: center;
+  gap: 0.5em;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  font-size: 0.9rem;
+}
+.tech_title div {
+  width: 50px;
+  border: 1px solid var(--dark);
+  margin-left: 1rem;
+  margin: 0 auto;
+}
+
+.tech_icons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.tech_icons img {
+  width: 35px;
+  height: 35px;
+  transition: all 0.3s;
+}
+.tech_icons img:hover {
+  transform: translateY(-5px);
+}
+
+.stack img {
+  width: 25px;
+  height: 25px;
+}
+
+/*about*/
+.about {
+  text-align: center;
+  display: grid;
+  gap: 3em;
+  place-content: center;
+  margin: 0 auto;
+  padding: 0.2rem 1.5rem;
+}
+
+.description {
+  display: grid;
+  gap: 1em;
+}
+.description p {
+  color: var(--neutral-800);
+  letter-spacing: 0.7px;
+  text-wrap: balance;
+  font-size: 0.9rem;
+}
+
+.about h2 {
+  color: #f05454;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.desc_parag {
+  display: grid;
+  gap: 1em;
+}
+
+.images {
+  margin: 0 auto;
+}
+
+.dev {
+  width: 200px;
+  height: 200px;
+  border-radius: 0.6rem;
+  box-shadow: 0 0px 1px 0 var(--dark);
+  transition: all 0.3s;
+}
+.dev:hover {
+  scale: 1.1;
+}
+
+/**/
+.arrow_haut {
+  position: fixed;
+  bottom: 2rem;
+  right: 1.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+}
+.arrow_haut.show {
+  opacity: 1;
+}
+
+/*projects*/
+.projects {
+  background-color: var(--light-500);
+  padding: 4rem 0;
+}
+
+.projects h2 {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #f05454;
+  padding-top: 3rem;
+  text-transform: uppercase;
+}
+
+.projects__section {
+  padding: 2rem 1rem;
+  display: grid;
+  gap: 4em;
+}
+
+.img_area {
+  width: 300px;
+  height: 350px;
+  background-image: url(img/screeshot\ phone_risat.jpeg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  border-radius: 0.2rem;
+  margin: 0 auto;
+  transition: 2s linear;
+  border: 1px solid var(--dark);
+}
+.img_area:hover,
+.img_dentalab:hover,
+.img_gemini:hover,
+.img_ecom:hover {
+  background-position: bottom;
+  cursor: pointer;
+}
+
+.img_dentalab {
+  width: 300px;
+  height: 350px;
+  background-image: url(img/screenshot\ phone_dentalab.jpeg) !important;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  border-radius: 0.2rem;
+  margin: 0 auto;
+  transition: 2s linear;
+  border: 1px solid var(--dark);
+}
+
+.img_gemini {
+  width: 300px;
+  height: 350px;
+  background-image: url(img/gemini-mobile.jpeg) !important;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  border-radius: 0.2rem;
+  margin: 0 auto;
+  transition: 2s linear;
+  border: 1px solid var(--dark);
+}
+
+.img_ecom {
+  width: 300px;
+  height: 350px;
+  background-image: url(img/salla-mobile.jpeg) !important;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  border-radius: 0.2rem;
+  margin: 0 auto;
+  transition: 2s linear;
+  border: 1px solid var(--dark);
+}
+
+.project_description {
+  display: grid;
+  place-content: center;
+  place-items: center;
+  gap: 2em;
+  padding-top: 2rem;
+}
+
+.risat {
+  background-color: #3b82f6;
+  padding: 0.2rem 0.8rem;
+  border-radius: 0.2rem;
+  color: #f9f9f9;
+}
+
+.dentalab {
+  background-color: #646cff;
+  padding: 0.2rem 0.8rem;
+  border-radius: 0.2rem;
+  color: #f9f9f9;
+}
+
+.gemini {
+  background-color: #30475e;
+  padding: 0.2rem 0.8rem;
+  border-radius: 0.2rem;
+  color: #f9f9f9;
+}
+
+.ecom {
+  background-color: #15803d;
+  padding: 0.2rem 0.8rem;
+  border-radius: 0.2rem;
+  color: #f9f9f9;
+}
+
+.project_description p {
+  font-size: 0.9rem;
+  letter-spacing: 0.4px;
+  text-align: center;
+  color: var(--neutral-800);
+}
+
+.project_links {
+  display: flex;
+  gap: 1.2em;
+  align-items: center;
+  justify-content: center;
+}
+
+.project_links a {
+  color: var(--dark);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.link_live {
+  color: var(--dark);
+  width: 20px;
+  height: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.github {
+  width: 25px;
+  height: 25px;
+  transition: all 0.3s ease-in-out;
+}
+
+.link_live:hover,
+.github:hover {
+  scale: 1.1;
+  color: #f05454;
+}
+
+.project_content {
+  box-shadow: 0 0 5px var(--dark);
+  border-radius: 0.5rem;
+  padding: 1.2rem 1rem;
+}
+
+/*contact*/
+.contact {
+  display: grid;
+  gap: 2em;
+  padding: 4rem 3rem;
+}
+@media (max-width: 1024px) {
+  .contact {
+    place-content: center;
+  }
+}
+
+.contact h2 {
+  color: #f05454;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.contact p {
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  font-size: 0.9rem;
+}
+
+.mail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+.mail svg {
+  box-shadow: 0 0 5px var(--dark);
+  color: #f05454;
+  border-radius: 50%;
+  padding: 0.3rem;
+  width: 37px;
+  height: 37px;
+}
+
+.mail a {
+  color: var(--dark);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  transition: all 0.3s;
+}
+.mail a:hover {
+  color: #f05454;
+}
+
+/*footer*/
+footer {
+  background-color: #30475e;
+  color: #f9f9f9;
+  padding: 1.1rem 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  user-select: none;
+}
+
+.copyright {
+  letter-spacing: 0.4px;
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+}
+
+.social_icons {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+}
+.social_icons a {
+  color: #f9f9f9;
+  transition: all 0.3s ease-in-out;
+}
+.social_icons a:hover {
+  transform: translateY(-4px);
+}
+
+/*preload*/
+.preloader {
+  background-color: var(--light);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.preloader.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.preloader img {
+  width: 100px;
+  height: 100px;
+  animation: flash 3.5s linear infinite;
+}
+@keyframes flash {
+  0% {
+    opacity: 0.2;
+    scale: 1;
+  }
+  50% {
+    opacity: 1;
+    scale: 1.2;
+  }
+  100% {
+    opacity: 0.2;
+    scale: 1;
+  }
+}

@@ -1,0 +1,187 @@
+@media (min-width: 1024px) {
+  header {
+    padding: 0.2rem 8rem;
+  }
+  header a {
+    font-size: 0.725rem;
+  }
+  header img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .hero {
+    max-width: 900px;
+    grid-template-columns: repeat(2, 1fr);
+    place-content: center;
+    place-items: center;
+    margin: 0 auto;
+    gap: 0;
+  }
+  .img {
+    width: 280px;
+    height: 280px;
+  }
+  .identify {
+    order: -1;
+    /* padding-left: 3rem; */
+  }
+  .identify p {
+    text-align: justify;
+    font-size: 1rem;
+  }
+
+  .tech_stack {
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+
+  .tech_title {
+    display: flex;
+    align-items: center;
+  }
+
+  .tech_title div {
+    width: 20px;
+    border: 1px solid var(--dark);
+    rotate: 90deg;
+  }
+
+  .about {
+    grid-template-columns: repeat(2, 1fr);
+    place-content: center;
+    place-items: center;
+    gap: 0;
+    max-width: 900px;
+    padding: 0;
+  }
+  .about p {
+    text-align: justify;
+    width: 400px;
+  }
+  .description {
+    gap: 0;
+  }
+  .description h2 {
+    text-align: start;
+    font-size: 1rem;
+  }
+  .description p {
+    color: var(--neutral-800);
+    letter-spacing: 0;
+    font-size: 0.925rem;
+    text-wrap: stable;
+  }
+  .dev {
+    width: 280px;
+    height: 280px;
+  }
+
+  /*projects*/
+  .projects {
+    margin: 0 auto;
+  }
+
+  .projects h2 {
+    font-size: 1rem;
+  }
+
+  .img_area {
+    background-image: url(img/screenshot\ risat.jpeg);
+    width: 450px;
+    height: 250px;
+    margin: auto;
+  }
+
+  .img_dentalab {
+    order: 1;
+    background-image: url(img/screeshot\ dentalab.jpeg) !important;
+    width: 450px;
+    height: 250px;
+    margin: auto;
+  }
+
+  .img_gemini {
+    background-image: url(img/gemini.jpeg) !important;
+    width: 450px;
+    height: 250px;
+    margin: auto;
+  }
+
+  .img_ecom {
+    order: 1;
+    background-image: url(img/salla.jpeg) !important;
+    width: 450px;
+    height: 250px;
+    margin: auto;
+  }
+
+  .project_content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    max-width: 900px;
+    padding: 0.8rem 1rem;
+  }
+
+  .project_description {
+    gap: 1em;
+    padding-top: 0;
+  }
+
+  .project_description h3 {
+    font-size: 0.9rem;
+    letter-spacing: 0.4px;
+  }
+
+  .project_description p {
+    text-align: justify;
+    padding: 0 1rem;
+    letter-spacing: 0.4px;
+  }
+
+  .projects__section {
+    padding-top: 2.5rem;
+  }
+
+  /*contact*/
+  .contact {
+    padding: 4rem 0rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .contact h2 {
+    font-size: 0.9rem;
+  }
+
+  .contact p {
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+
+  .mail {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  footer {
+    justify-content: space-around;
+    padding: 1.5rem 0;
+  }
+  .copyright {
+    letter-spacing: 0.6px;
+  }
+  .social_icons {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
+
+  .social_icons svg {
+    width: 26px;
+    height: 26px;
+  }
+}
