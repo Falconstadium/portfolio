@@ -182,7 +182,7 @@ header.sticky {
 }
 .description p {
   color: var(--neutral-800);
-  letter-spacing: 0.7px;
+  letter-spacing: 0.4px;
   text-wrap: balance;
   font-size: 0.9rem;
   font-weight: 500;

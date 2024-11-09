@@ -194,6 +194,7 @@
 
   .arrow_haut {
     right: 2rem;
+    bottom: 2rem;
     width: 35px;
     aspect-ratio: 1/1;
   }

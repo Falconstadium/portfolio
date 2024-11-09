@@ -8,29 +8,28 @@ const sunIcon = document.getElementById('sun-icon');
 const moonIcon = document.getElementById('moon-icon');
 
 const lightMode = () => {
-  document.body.classList.toggle('dark-theme');
+  document.body.classList.remove('dark-theme');
   moonIcon.style.display = 'block';
   sunIcon.style.display = 'none';
-  const isDark = document.body.classList.contains('dark-theme');
-  localStorage.setItem('light', isDark);
+  localStorage.setItem('dark', 'false');
 };
-
-const isLight = localStorage.getItem('light');
-if (isLight === 'true') {
-  document.body.classList.add('dark-theme');
-}
 
 const darkMode = () => {
-  document.body.classList.toggle('dark-theme');
+  document.body.classList.add('dark-theme');
   moonIcon.style.display = 'none';
   sunIcon.style.display = 'block';
-  const isDark = document.body.classList.contains('dark-theme');
-  localStorage.setItem('dark', isDark);
+  localStorage.setItem('dark', 'true');
 };
 
-const isDarkMode = localStorage.getItem('dark');
-if (isDarkMode === 'true') {
+const isDarkMode = localStorage.getItem('dark') === 'true';
+if (isDarkMode) {
   document.body.classList.add('dark-theme');
+  moonIcon.style.display = 'none';
+  sunIcon.style.display = 'block';
+} else {
+  document.body.classList.remove('dark-theme');
+  moonIcon.style.display = 'block';
+  sunIcon.style.display = 'none';
 }
 
 sunIcon.addEventListener('click', lightMode);
