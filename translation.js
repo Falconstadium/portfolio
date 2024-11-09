@@ -1,4 +1,4 @@
-const fullName = document.querySelector('[data-i]');
+const fullName = document.querySelector('[data-i18]');
 
 let translatedLang = {
   en: {

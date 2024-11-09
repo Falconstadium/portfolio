@@ -221,7 +221,7 @@ header.sticky {
   right: 1.5rem;
   cursor: pointer;
   transition: 0.3s;
-  width: 30px;
+  width: 40px;
   aspect-ratio: 1/1;
   opacity: 0;
   background-color: #3b82f6;
