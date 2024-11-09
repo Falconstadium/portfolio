@@ -8,30 +8,30 @@ const sunIcon = document.getElementById('sun-icon');
 const moonIcon = document.getElementById('moon-icon');
 
 const lightMode = () => {
-  document.body.classList.toggle('dark-theme');
   moonIcon.style.display = 'block';
   sunIcon.style.display = 'none';
-  const isDark = document.body.classList.contains('dark-theme');
-  localStorage.setItem('light', isDark);
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.remove('dark-theme');
+    localStorage.setItem('theme', 'light');
+  } else {
+    document.body.classList.add('dark-theme');
+    localStorage.setItem('theme', 'dark');
+  }
 };
-
-const isLight = localStorage.getItem('light');
-if (isLight === 'true') {
-  document.body.classList.add('dark-theme');
-}
 
 const darkMode = () => {
-  document.body.classList.toggle('dark-theme');
   moonIcon.style.display = 'none';
   sunIcon.style.display = 'block';
-  const isDark = document.body.classList.contains('dark-theme');
-  localStorage.setItem('dark', isDark);
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.remove('dark-theme');
+    localStorage.setItem('theme', 'light');
+  } else {
+    document.body.classList.add('dark-theme');
+    localStorage.setItem('theme', 'dark');
+  }
 };
-
-const isDarkMode = localStorage.getItem('dark');
-if (isDarkMode === 'true') {
-  document.body.classList.add('dark-theme');
-}
 
 sunIcon.addEventListener('click', lightMode);
 moonIcon.addEventListener('click', darkMode);

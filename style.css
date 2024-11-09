@@ -1,5 +1,5 @@
 header {
-  padding: 0.2rem 1.3rem;
+  padding: 0.5rem 1.3rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -57,7 +57,7 @@ header.sticky {
   letter-spacing: 0.6px;
 }
 .icons select:hover {
-  color: #f05454;
+  color: #d92e2e;
 }
 
 .icons select option {
@@ -185,10 +185,11 @@ header.sticky {
   letter-spacing: 0.7px;
   text-wrap: balance;
   font-size: 0.9rem;
+  font-weight: 500;
 }
 
 .about h2 {
-  color: #f05454;
+  color: #d92e2e;
   text-transform: uppercase;
   font-size: 0.8rem;
 }
@@ -216,13 +217,18 @@ header.sticky {
 /**/
 .arrow_haut {
   position: fixed;
-  bottom: 2rem;
+  bottom: 3rem;
   right: 1.5rem;
   cursor: pointer;
   transition: 0.3s;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  aspect-ratio: 1/1;
   opacity: 0;
+  background-color: #3b82f6;
+  border-radius: 0.7rem;
+  padding: 0.4rem 0.2rem;
+  color: #fff;
+  z-index: 1;
 }
 .arrow_haut.show {
   opacity: 1;
@@ -237,7 +243,7 @@ header.sticky {
 .projects h2 {
   text-align: center;
   font-size: 0.8rem;
-  color: #f05454;
+  color: #d92e2e;
   padding-top: 3rem;
   text-transform: uppercase;
 }
@@ -250,15 +256,15 @@ header.sticky {
 
 .img_area {
   width: 300px;
-  height: 350px;
+  height: 500px;
   background-image: url(img/screeshot\ phone_risat.jpeg);
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
-  border-radius: 0.2rem;
+  border-radius: 0.5rem;
   margin: 0 auto;
   transition: 2s linear;
-  border: 1px solid var(--dark);
+  box-shadow: 0 0 5px -2px var(--dark);
 }
 .img_area:hover,
 .img_dentalab:hover,
@@ -270,41 +276,41 @@ header.sticky {
 
 .img_dentalab {
   width: 300px;
-  height: 350px;
+  height: 500px;
   background-image: url(img/screenshot\ phone_dentalab.jpeg) !important;
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
-  border-radius: 0.2rem;
+  border-radius: 0.5rem;
   margin: 0 auto;
   transition: 2s linear;
-  border: 1px solid var(--dark);
+  box-shadow: 0 0 5px -2px var(--dark);
 }
 
 .img_gemini {
   width: 300px;
-  height: 350px;
+  height: 500px;
   background-image: url(img/gemini-mobile.jpeg) !important;
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
-  border-radius: 0.2rem;
+  border-radius: 0.5rem;
   margin: 0 auto;
   transition: 2s linear;
-  border: 1px solid var(--dark);
+  box-shadow: 0 0 5px -2px var(--dark);
 }
 
 .img_ecom {
   width: 300px;
-  height: 350px;
+  height: 500px;
   background-image: url(img/salla-mobile.jpeg) !important;
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
-  border-radius: 0.2rem;
+  border-radius: 0.5rem;
   margin: 0 auto;
   transition: 2s linear;
-  border: 1px solid var(--dark);
+  box-shadow: 0 0 5px -2px var(--dark);
 }
 
 .project_description {
@@ -348,6 +354,7 @@ header.sticky {
   letter-spacing: 0.4px;
   text-align: center;
   color: var(--neutral-800);
+  font-weight: 500;
 }
 
 .project_links {
@@ -357,37 +364,43 @@ header.sticky {
   justify-content: center;
 }
 
-.project_links a {
-  color: var(--dark);
-  text-decoration: none;
+.live-demo {
   display: flex;
   align-items: center;
   gap: 0.5em;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  background-color: #d92e2e;
+  padding: 0.2rem 0.7rem;
+  border-radius: 1rem;
+  transition: 0.3s;
 }
-
-.link_live {
-  color: var(--dark);
-  width: 20px;
-  height: 20px;
-  transition: all 0.3s ease-in-out;
-}
-
-.github {
+.live-demo svg {
   width: 25px;
-  height: 25px;
-  transition: all 0.3s ease-in-out;
+}
+.live-demo:hover {
+  background-color: #f95454;
+}
+.live-demo:focus {
+  outline: 2px solid #c15151f1;
 }
 
-.link_live:hover,
-.github:hover {
+.github-link {
+  width: 25px;
+  color: var(--dark);
+  transition: 0.3s;
+}
+.github-link:hover {
+  color: #d92e2e;
   scale: 1.1;
-  color: #f05454;
 }
 
 .project_content {
-  box-shadow: 0 0 5px var(--dark);
+  box-shadow: 0 0 3px -2px var(--dark);
   border-radius: 0.5rem;
   padding: 1.2rem 1rem;
+  background-color: var(--light);
 }
 
 /*contact*/
@@ -403,9 +416,9 @@ header.sticky {
 }
 
 .contact h2 {
-  color: #f05454;
+  color: #d92e2e;
   text-transform: uppercase;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .contact p {
@@ -422,7 +435,7 @@ header.sticky {
 }
 .mail svg {
   box-shadow: 0 0 5px var(--dark);
-  color: #f05454;
+  color: #d92e2e;
   border-radius: 50%;
   padding: 0.3rem;
   width: 37px;
@@ -438,7 +451,7 @@ header.sticky {
   transition: all 0.3s;
 }
 .mail a:hover {
-  color: #f05454;
+  color: #d92e2e;
 }
 
 /*footer*/
@@ -497,7 +510,7 @@ footer {
 .preloader img {
   width: 100px;
   height: 100px;
-  animation: flash 3.5s linear infinite;
+  animation: flash 3s linear infinite;
 }
 @keyframes flash {
   0% {

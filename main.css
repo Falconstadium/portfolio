@@ -84,13 +84,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 :root {
-  --dark: #121212;
+  --dark: #0c0c0c;
   --light: #fff;
 
-  --dark-500: #151515;
+  --dark-500: #121212;
   --light-500: #f9f9f9;
 
-  --neutral-800: #262626;
+  --neutral-800: #404040;
 }
 
 body {
@@ -103,6 +103,19 @@ body {
   width: 100%;
 }
 
+main {
+  animation: fadeUp 4s ease;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .dark-theme {
   --dark: #fff;
   --light: #121212;
@@ -110,7 +123,7 @@ body {
   --dark-500: #f9f9f9;
   --light-500: #151515;
 
-  --neutral-800: #e5e5e5;
+  --neutral-800: #d4d4d4;
 }
 #moon-icon {
   display: none;
