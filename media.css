@@ -24,7 +24,9 @@
   }
   .identify {
     order: -1;
-    /* padding-left: 3rem; */
+  }
+  .identify h1 {
+    font-size: 3.5rem;
   }
   .identify p {
     text-align: justify;
@@ -154,7 +156,7 @@
 
   /*contact*/
   .contact {
-    padding: 4rem 0rem;
+    padding: 5rem 0rem;
     max-width: 900px;
     margin: 0 auto;
   }
@@ -172,6 +174,10 @@
     display: flex;
     justify-content: center;
     margin: 0 auto;
+  }
+
+  .mail a {
+    font-size: 1rem;
   }
 
   footer {
@@ -194,8 +200,6 @@
 
   .arrow_haut {
     right: 2rem;
-    bottom: 2rem;
-    width: 35px;
-    aspect-ratio: 1/1;
+    bottom: 3rem;
   }
 }

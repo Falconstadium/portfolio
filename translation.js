@@ -2,8 +2,9 @@ const fullName = document.querySelector('[data-i18]');
 
 let translatedLang = {
   en: {
-    identify_title: 'Front-End Web Developer.',
-    identify_strong: 'Front-end',
+    frontend: 'Frontend',
+    dev: 'Web Developer.',
+    identify_strong: 'Frontend',
     identify_name: ' YASSIR ATERTA 🖐🏻.',
     identify_hello: "Hi, I'm",
     identify_enth: 'A passionate',
@@ -22,17 +23,17 @@ let translatedLang = {
     gemini: 'This is a clone of Google Gemini.',
     salla:
       'Salla is an e-commerce website, in this project I used nextjs, this is the first time I have worked with next, I also used shadcn-ui and context API.',
-    visit: 'Visit',
+    visit: 'Click here to Visit',
     contact_title: 'get in touch',
     contact_description: "Don't hesitate to contact me! 👇",
     footer: 'All rights reserved',
   },
 
   fr: {
-    identify_title: 'Développeur Web Front-End.',
+    identify_title: 'Développeur Web Frontend.',
     identify_hello: 'Salut, je suis',
     identify_name: ' YASSIR ATERTA 🖐🏻.',
-    identify_strong: 'Front-end',
+    identify_strong: 'Frontend',
     identify_enth: 'un passionné',
     identify_final_exp: 'Développeur Web basé à Agadir, Maroc.📍',
     stack: 'Stack Tech',
@@ -49,7 +50,7 @@ let translatedLang = {
     gemini: 'c’est un clone pour google Gemini.',
     salla:
       'Salla est un site e-commerce, dans ce projet j’ai utilisé nextjs, c’est la première fois que je travaille avec next, j’ai aussi utilisé shadcn-ui et context API.',
-    visit: 'Visite',
+    visit: 'Cliquer ici pour Visiter',
     contact_title: 'prendre contact',
     contact_description: 'N’hésitez pas à me contacter! 👇',
     footer: 'Tous droits réservés',

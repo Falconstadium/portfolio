@@ -13,6 +13,8 @@
 */
 * {
   margin: 0;
+  scrollbar-color: #f05454 transparent;
+  scrollbar-width: thin;
 }
 /*
   Typographic tweaks!
@@ -74,15 +76,6 @@ h6 {
   isolation: isolate;
 }
 
-body::-webkit-scrollbar {
-  width: 7px;
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: #f05454;
-  outline: 1px solid #f05454;
-}
-
 :root {
   --dark: #0c0c0c;
   --light: #fff;
@@ -125,6 +118,7 @@ main {
 
   --neutral-800: #d4d4d4;
 }
+
 #moon-icon {
   display: none;
   cursor: pointer;
