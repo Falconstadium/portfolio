@@ -30,7 +30,8 @@ let translatedLang = {
   },
 
   fr: {
-    identify_title: 'Développeur Web Frontend.',
+    frontend: 'Développeur',
+    dev: 'Web Frontend.',
     identify_hello: 'Salut, je suis',
     identify_name: ' YASSIR ATERTA 🖐🏻.',
     identify_strong: 'Frontend',
