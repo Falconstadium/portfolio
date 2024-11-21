@@ -1,5 +1,5 @@
 header {
-  padding: 0.5rem 1.3rem;
+  padding: 1.3rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -12,23 +12,12 @@ header {
   background-color: var(--light);
 }
 
-header img {
-  width: 40px;
-  height: 40px;
-}
-
 header a {
-  display: flex;
-  align-items: center;
   text-decoration: none;
   color: var(--dark);
-  font-size: 0.8rem;
-  font-family: monospace;
-  letter-spacing: 0.2px;
-  font-weight: 600;
-}
-header span {
-  line-height: 1;
+  font-size: 1.2rem;
+  font-family: 'Parkinsans', sans-serif;
+  font-weight: bold;
 }
 
 header svg {
@@ -69,7 +58,7 @@ header.sticky {
 
 /*hero*/
 .container {
-  margin-top: 2rem;
+  margin-top: 1rem;
   display: grid;
   place-content: center;
   place-items: center;
@@ -493,11 +482,11 @@ footer {
 .preloader {
   background-color: var(--light);
   width: 100%;
-  height: 100vh;
+  min-height: 100dvh;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 999;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -509,10 +498,13 @@ footer {
   visibility: hidden;
 }
 
-.preloader img {
-  width: 100px;
-  height: 100px;
-  animation: flash 3s linear infinite;
+.preloader a {
+  font-size: 3rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--dark);
+  font-family: 'Parkinsans', sans-serif;
+  animation: flash 2.5s linear infinite;
 }
 @keyframes flash {
   0% {

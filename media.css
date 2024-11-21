@@ -1,13 +1,9 @@
 @media (min-width: 900px) {
   header {
-    padding: 0.8rem 8rem;
+    padding: 1.4rem 10rem;
   }
   header a {
-    font-size: 0.725rem;
-  }
-  header img {
-    width: 45px;
-    height: 45px;
+    font-size: 1.4rem;
   }
 
   .hero {
