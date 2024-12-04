@@ -498,25 +498,33 @@ footer {
   visibility: hidden;
 }
 
-.preloader a {
-  font-size: 3rem;
-  font-weight: bold;
-  text-decoration: none;
-  color: var(--dark);
-  font-family: 'Parkinsans', sans-serif;
-  animation: flash 2.5s linear infinite;
+.loader {
+  border: 5px solid var(--dark-500);
+  border-left-color: transparent;
+  border-radius: 50%;
 }
-@keyframes flash {
+
+.loader {
+  border: 5px solid var(--dark-500);
+  border-left-color: transparent;
+  width: 36px;
+  height: 36px;
+}
+
+.loader {
+  border: 5px solid var(--dark-500);
+  border-left-color: transparent;
+  width: 36px;
+  height: 36px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
   0% {
-    opacity: 0.2;
-    scale: 1;
+    transform: rotate(0deg);
   }
-  50% {
-    opacity: 1;
-    scale: 1.2;
-  }
+
   100% {
-    opacity: 0.2;
-    scale: 1;
+    transform: rotate(360deg);
   }
 }

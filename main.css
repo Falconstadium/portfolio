@@ -98,19 +98,6 @@ body {
   transition: all 0.4s;
 }
 
-main {
-  animation: fadeUp 4s ease;
-}
-
-@keyframes fadeUp {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 .dark-theme {
   --dark: #fff;
   --light: #121212;

@@ -12,7 +12,7 @@ let translatedLang = {
     stack: 'Tech Stack',
     about_title: 'About me :',
     about_firstparag:
-      "Hey, my name is Yassir, and I'm a Frontend Developer. I am enthusiastic and ambitious. I understand the significance of teamwork, problem-solving abilities, passion for learning, and ability to connect with others.",
+      "Hey, my name is Yassir, and I'm a Frontend web developer, with a focus on developing landing pages and websites.",
     about_secondparag:
       'My main stack currently is React in combination with Tailwind CSS and TypeScript.',
     projects_title: 'Projects :',
@@ -40,7 +40,7 @@ let translatedLang = {
     stack: 'Stack Tech',
     about_title: 'À propos :',
     about_firstparag:
-      'Bonjour, je m’appelle Yassir et je suis développeur Frontend. Je suis enthousiaste et ambitieux. Je comprends l’importance du travail d’équipe, des capacités de résolution de problèmes, de la passion pour l’apprentissage et de la capacité à établir des liens avec les autres.',
+      'Bonjour, je m’appelle Yassir et je suis développeur web Frontend, spécialisé dans le développement de pages de renvoi et de sites web.',
     about_secondparag:
       'Ma pile principale est actuellement React en combinaison avec Tailwind CSS et TypeScript.',
     projects_title: 'Projets :',

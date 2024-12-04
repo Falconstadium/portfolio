@@ -75,7 +75,7 @@
   .description p {
     color: var(--neutral-800);
     letter-spacing: 0;
-    font-size: 0.925rem;
+    font-size: 1rem;
     text-wrap: stable;
   }
   .dev {
