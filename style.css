@@ -365,6 +365,7 @@ header.sticky {
   background-color: #d92e2e;
   padding: 0.2rem 0.7rem;
   border-radius: 1rem;
+  text-transform: capitalize;
   transition: 0.3s;
 }
 .live-demo svg {

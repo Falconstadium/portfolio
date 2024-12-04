@@ -23,7 +23,7 @@ let translatedLang = {
     gemini: 'This is a clone of Google Gemini.',
     salla:
       'Salla is an e-commerce website, in this project I used nextjs, this is the first time I have worked with next, I also used shadcn-ui and context API.',
-    visit: 'Click here to Visit',
+    visit: 'live demo',
     contact_title: 'get in touch',
     contact_description: "Don't hesitate to contact me! 👇",
     footer: 'All rights reserved',
@@ -51,7 +51,7 @@ let translatedLang = {
     gemini: 'c’est un clone pour google Gemini.',
     salla:
       'Salla est un site e-commerce, dans ce projet j’ai utilisé nextjs, c’est la première fois que je travaille avec next, j’ai aussi utilisé shadcn-ui et context API.',
-    visit: 'Cliquer ici pour Visiter',
+    visit: 'démo en direct',
     contact_title: 'prendre contact',
     contact_description: 'N’hésitez pas à me contacter! 👇',
     footer: 'Tous droits réservés',
@@ -83,3 +83,4 @@ const setLanguage = (language) => {
     element.textContent = translatedLang[language][translationKey];
   });
 };
+r;
