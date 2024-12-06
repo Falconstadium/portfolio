@@ -83,4 +83,3 @@ const setLanguage = (language) => {
     element.textContent = translatedLang[language][translationKey];
   });
 };
-r;

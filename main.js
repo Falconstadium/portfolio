@@ -55,7 +55,10 @@ showIcon.onclick = function () {
 
 //load
 const spinner = document.querySelector('.preloader');
+const main = document.querySelector('main');
 
 setTimeout(() => {
   spinner.classList.add('hide');
-}, 3000);
+  main.style.animationName = 'fade-in';
+  main.style.animationDuration = '1.5s';
+}, 2000);
