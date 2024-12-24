@@ -81,10 +81,20 @@ h6 {
   --dark: #0c0c0c;
   --light: #fff;
 
-  --dark-500: #121212;
+  --dark-500: #101010;
   --light-500: #f7f7f7;
 
   --neutral-800: #404040;
+}
+
+[data-theme='dark'] {
+  --light: #0c0c0c;
+  --dark: #fff;
+
+  --dark-500: #f7f7f7;
+  --light-500: #101010;
+
+  --neutral-800: #d4d4d4;
 }
 
 body {
@@ -95,32 +105,7 @@ body {
   grid-template-rows: auto 1fr auto;
   min-height: 100dvh;
   width: 100%;
-  transition: all 0.4s;
-}
-
-.dark-theme {
-  --dark: #fff;
-  --light: #121212;
-
-  --dark-500: #f7f7f7;
-  --light-500: #151515;
-
-  --neutral-800: #d4d4d4;
-}
-
-#moon-icon {
-  display: none;
-  cursor: pointer;
-  transition: 0.3s;
-}
-#sun-icon {
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-#sun-icon:hover,
-#moon-icon:hover {
-  scale: 1.1;
+  transition: all 0.5s;
 }
 
 .content {

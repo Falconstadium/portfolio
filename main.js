@@ -4,36 +4,49 @@ window.addEventListener('scroll', () => {
 });
 
 //Dark mode
-const sunIcon = document.getElementById('sun-icon');
-const moonIcon = document.getElementById('moon-icon');
+document.addEventListener('DOMContentLoaded', function () {
+  const toggleSwitch = document.querySelector(
+    '#theme-switch input[type="checkbox"]'
+  );
 
-const lightMode = () => {
-  document.body.classList.remove('dark-theme');
-  moonIcon.style.display = 'block';
-  sunIcon.style.display = 'none';
-  localStorage.setItem('dark', 'false');
-};
+  function detectColorScheme() {
+    let theme = 'light';
 
-const darkMode = () => {
-  document.body.classList.add('dark-theme');
-  moonIcon.style.display = 'none';
-  sunIcon.style.display = 'block';
-  localStorage.setItem('dark', 'true');
-};
+    //local storage is used to override OS theme settings
+    if (localStorage.getItem('theme')) {
+      if (localStorage.getItem('theme') == 'dark') {
+        theme = 'dark';
+      }
+    } else if (!window.matchMedia) {
+      return false;
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      theme = 'dark';
+    }
 
-const isDarkMode = localStorage.getItem('dark') === 'true';
-if (isDarkMode) {
-  document.body.classList.add('dark-theme');
-  moonIcon.style.display = 'none';
-  sunIcon.style.display = 'block';
-} else {
-  document.body.classList.remove('dark-theme');
-  moonIcon.style.display = 'block';
-  sunIcon.style.display = 'none';
-}
+    if (theme == 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  }
+  detectColorScheme();
 
-sunIcon.addEventListener('click', lightMode);
-moonIcon.addEventListener('click', darkMode);
+  function switchTheme(e) {
+    if (e.target.checked) {
+      localStorage.setItem('theme', 'dark');
+      document.documentElement.setAttribute('data-theme', 'dark');
+      toggleSwitch.checked = true;
+    } else {
+      localStorage.setItem('theme', 'light');
+      document.documentElement.setAttribute('data-theme', 'light');
+      toggleSwitch.checked = false;
+    }
+  }
+
+  toggleSwitch.addEventListener('change', switchTheme, false);
+
+  if (document.documentElement.getAttribute('data-theme') == 'dark') {
+    toggleSwitch.checked = true;
+  }
+});
 
 //arrow-haut
 let showIcon = document.querySelector('.arrow_haut');
@@ -59,6 +72,6 @@ const main = document.querySelector('main');
 
 setTimeout(() => {
   spinner.classList.add('hide');
-  main.style.animationName = 'fade-in';
-  main.style.animationDuration = '1.5s';
+  // main.style.animationName = 'fade-in';
+  // main.style.animationDuration = '1s';
 }, 2000);
