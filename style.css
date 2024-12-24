@@ -1,5 +1,5 @@
 header {
-  padding: 1.3rem 2rem;
+  padding: 1.3rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -15,7 +15,7 @@ header {
 header a {
   text-decoration: none;
   color: var(--dark);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-family: 'Parkinsans', sans-serif;
   font-weight: bold;
 }
@@ -25,46 +25,49 @@ header.sticky {
 }
 
 /* theme-mode */
-#checkbox-theme {
-  display: none;
-}
-
-.theme-switch {
-  background: var(--dark);
-  width: 40px;
-  height: 20px;
-  border-radius: 1rem;
+/* From Uiverse.io by Yaya12085 */
+.switch {
   position: relative;
+  height: 1.5rem;
+  width: 3rem;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: 4rem;
+  background-color: rgba(100, 116, 139, 0.377);
+  transition: all 0.3s ease;
 }
 
-/* light mode icon */
-#checkbox-theme + label:before {
-  content: '';
-  font-size: 20px;
-  cursor: pointer;
-  position: absolute;
-  top: 0.12rem;
-  left: 0.2rem;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: var(--light);
-  transition: 0.3s;
+.switch:checked {
+  background-color: #242424;
 }
 
-/* dark mode icon */
-#checkbox-theme:checked + label:before {
-  content: '';
-  font-size: 20px;
-  cursor: pointer;
+.switch::before {
   position: absolute;
-  top: 0.12rem;
-  left: 1.5rem;
-  width: 17px;
-  height: 17px;
-  border-radius: 50%;
-  background: var(--light);
-  transition: 0.3s;
+  content: '';
+  left: calc(1.5rem - 1.6rem);
+  top: calc(1.55rem - 1.6rem);
+  display: block;
+  height: 1.6rem;
+  width: 1.6rem;
+  cursor: pointer;
+  border: 1px solid rgba(100, 116, 139, 0.527);
+  border-radius: 9999px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 3px 10px rgba(100, 116, 139, 0.327);
+  transition: all 0.3s ease;
+}
+
+.switch:hover::before {
+  box-shadow: 0 0 0px 8px rgba(0, 0, 0, 0.15);
+}
+
+.switch:checked:hover::before {
+  box-shadow: 0 0 0px 8px rgba(127, 118, 123, 0.15);
+}
+
+.switch:checked:before {
+  transform: translateX(100%);
 }
 
 .icons {
@@ -78,7 +81,7 @@ header.sticky {
   border: none;
   outline: none;
   color: var(--dark);
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   cursor: pointer;
   transition: 0.3s;
   font-weight: 500;
@@ -102,6 +105,7 @@ header.sticky {
   place-items: center;
   gap: 4em;
   text-align: center;
+  background-color: var(--light-500);
 }
 
 .hero {
@@ -113,12 +117,12 @@ header.sticky {
   line-height: 0.8;
   letter-spacing: -0.2px;
   text-wrap: balance;
-  font-size: 2.2rem;
+  font-size: var(--fs-h1);
 }
 .identify p {
   letter-spacing: 0.1px;
   padding: 1.2rem 0.6rem;
-  font-size: 0.9rem;
+  font-size: var(--fs-p);
   color: var(--neutral-800);
 }
 
@@ -163,7 +167,7 @@ header.sticky {
   gap: 0.5em;
   font-weight: 500;
   letter-spacing: 0.4px;
-  font-size: 0.9rem;
+  font-size: var(--fs-p);
 }
 .tech_title div {
   width: 50px;
@@ -202,7 +206,6 @@ header.sticky {
   place-content: center;
   margin: 0 auto;
   padding: 0.2rem 1.5rem;
-  background-color: var(--light-500);
 }
 
 .description {
@@ -213,14 +216,14 @@ header.sticky {
   color: var(--neutral-800);
   letter-spacing: 0.4px;
   text-wrap: balance;
-  font-size: 0.9rem;
+  font-size: var(--fs-p);
   font-weight: 500;
 }
 
 .about h2 {
   color: #d92e2e;
   text-transform: uppercase;
-  font-size: 0.8rem;
+  font-size: var(--fs-h2);
 }
 
 .desc_parag {
@@ -266,11 +269,12 @@ header.sticky {
 /*projects*/
 .projects {
   padding: 4rem 0;
+  background-color: var(--light-500);
 }
 
 .projects h2 {
   text-align: center;
-  font-size: 0.8rem;
+  font-size: var(--fs-h2);
   color: #d92e2e;
   padding-top: 3rem;
   text-transform: uppercase;
@@ -354,6 +358,7 @@ header.sticky {
   padding: 0.2rem 0.8rem;
   border-radius: 0.2rem;
   color: #f9f9f9;
+  font-size: var(--fs-h2);
 }
 
 .dentalab {
@@ -361,6 +366,7 @@ header.sticky {
   padding: 0.2rem 0.8rem;
   border-radius: 0.2rem;
   color: #f9f9f9;
+  font-size: var(--fs-h2);
 }
 
 .gemini {
@@ -368,6 +374,7 @@ header.sticky {
   padding: 0.2rem 0.8rem;
   border-radius: 0.2rem;
   color: #f9f9f9;
+  font-size: var(--fs-h2);
 }
 
 .ecom {
@@ -375,10 +382,11 @@ header.sticky {
   padding: 0.2rem 0.8rem;
   border-radius: 0.2rem;
   color: #f9f9f9;
+  font-size: var(--fs-h2);
 }
 
 .project_description p {
-  font-size: 0.9rem;
+  font-size: var(--fs-p);
   letter-spacing: 0.4px;
   text-align: center;
   color: var(--neutral-800);
@@ -399,6 +407,7 @@ header.sticky {
   color: #fff;
   text-decoration: none;
   font-weight: 500;
+  font-size: var(--fs-link);
   background-color: #d92e2e;
   padding: 0.2rem 0.7rem;
   border-radius: 1rem;
@@ -406,7 +415,8 @@ header.sticky {
   transition: 0.3s;
 }
 .live-demo svg {
-  width: 25px;
+  width: 20px;
+  aspect-ratio: 1/1;
 }
 .live-demo:hover {
   background-color: #f95454;
@@ -416,12 +426,16 @@ header.sticky {
 }
 
 .github-link {
-  width: 25px;
-  color: var(--dark);
+  width: 28px;
+  aspect-ratio: 1/1;
+  color: var(--light);
+  background-color: var(--dark-500);
+  border-radius: 0.2rem;
+  padding: 0.1rem 0.3rem;
   transition: 0.3s;
 }
 .github-link:hover {
-  color: #d92e2e;
+  background-color: var(--dark);
   scale: 1.1;
 }
 
@@ -437,7 +451,6 @@ header.sticky {
   display: grid;
   gap: 2em;
   padding: 4rem 3rem;
-  background-color: var(--light-500);
 }
 @media (max-width: 1024px) {
   .contact {
@@ -448,13 +461,13 @@ header.sticky {
 .contact h2 {
   color: #d92e2e;
   text-transform: uppercase;
-  font-size: 0.9rem;
+  font-size: var(--fs-h2);
 }
 
 .contact p {
   font-weight: 500;
   letter-spacing: 0.4px;
-  font-size: 0.9rem;
+  font-size: var(--fs-p);
 }
 
 .mail {
@@ -475,7 +488,7 @@ header.sticky {
 .mail a {
   color: var(--dark);
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: var(--fs-link);
   font-weight: 500;
   letter-spacing: 0.4px;
   transition: all 0.3s;
@@ -493,7 +506,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   user-select: none;
 }
 
@@ -555,12 +568,6 @@ footer {
   100% {
     transform: rotate(360deg);
   }
-}
-
-section {
-  animation: fade-in linear;
-  animation-timeline: view();
-  animation-range: entry 50% cover 40%;
 }
 
 @keyframes fade-in {

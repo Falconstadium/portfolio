@@ -1,9 +1,16 @@
 @media (min-width: 900px) {
+  :root {
+    --fs-h1: 2.9rem;
+    --fs-h2: 1rem;
+    --fs-p: 0.9rem;
+    --fs-link: 0.875rem;
+  }
+
   header {
     padding: 1.4rem 10rem;
   }
   header a {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   .hero {
@@ -22,11 +29,11 @@
     order: -1;
   }
   .identify h1 {
-    font-size: 3.5rem;
+    font-size: var(--fs-h1);
   }
   .identify p {
     text-align: justify;
-    font-size: 1rem;
+    font-size: var(--fs-p);
   }
 
   .tech_stack {
@@ -40,7 +47,7 @@
     align-items: center;
   }
   .tech_title p {
-    font-size: 1rem;
+    font-size: var(--fs-p);
   }
 
   .tech_title div {
@@ -70,12 +77,12 @@
   }
   .description h2 {
     text-align: start;
-    font-size: 1rem;
+    font-size: var(--fs-h2);
   }
   .description p {
     color: var(--neutral-800);
     letter-spacing: 0;
-    font-size: 1rem;
+    font-size: var(--fs-p);
     text-wrap: stable;
   }
   .dev {
@@ -89,7 +96,7 @@
   }
 
   .projects h2 {
-    font-size: 1rem;
+    font-size: var(--fs-h2);
   }
 
   .img_area {
@@ -144,6 +151,7 @@
     text-align: justify;
     padding: 0 1rem;
     letter-spacing: 0.4px;
+    font-size: var(--fs-p);
   }
 
   .projects__section {
@@ -152,18 +160,18 @@
 
   /*contact*/
   .contact {
-    padding: 5rem 0rem;
+    padding: 5rem auto;
     max-width: 900px;
     margin: 0 auto;
   }
 
   .contact h2 {
-    font-size: 0.9rem;
+    font-size: var(--fs-h2);
   }
 
   .contact p {
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: var(--fs-p);
   }
 
   .mail {
@@ -173,7 +181,7 @@
   }
 
   .mail a {
-    font-size: 1rem;
+    font-size: var(--fs-link);
   }
 
   footer {

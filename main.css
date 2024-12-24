@@ -85,6 +85,11 @@ h6 {
   --light-500: #f7f7f7;
 
   --neutral-800: #404040;
+
+  --fs-h1: 2rem;
+  --fs-h2: 0.825rem;
+  --fs-p: 0.8rem;
+  --fs-link: 0.8rem;
 }
 
 [data-theme='dark'] {

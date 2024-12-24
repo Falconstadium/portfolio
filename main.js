@@ -5,9 +5,7 @@ window.addEventListener('scroll', () => {
 
 //Dark mode
 document.addEventListener('DOMContentLoaded', function () {
-  const toggleSwitch = document.querySelector(
-    '#theme-switch input[type="checkbox"]'
-  );
+  const toggleSwitch = document.querySelector('.switch');
 
   function detectColorScheme() {
     let theme = 'light';
@@ -72,6 +70,6 @@ const main = document.querySelector('main');
 
 setTimeout(() => {
   spinner.classList.add('hide');
-  // main.style.animationName = 'fade-in';
-  // main.style.animationDuration = '1s';
+  main.style.animationName = 'fade-in';
+  main.style.animationDuration = '1s';
 }, 2000);
